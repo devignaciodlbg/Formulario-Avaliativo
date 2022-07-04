@@ -1,0 +1,213 @@
+/*
+font-family: 'Poppins', sans-serif; //weight: 400
+font-family: 'Mukta', sans-serif; //weight: 400 & 700
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%; /* 62.5% = 10px */
+
+  --ff-body: 'Poppins', sans-serif;
+  --ff-titles: 'Mukta', sans-serif;
+
+  --bg-primary: hsla(29, 42%, 58%, 0.521);
+  --bg-secondary: #fbefd5;
+  --bg-button: #f67669;
+  --bg-input: #ededf5;
+  --bg-form: hsla(347, 83%, 91%, 0.26);
+
+  --fc-header: #ffffff;
+  --fc-form-span: #8f8a99;
+  --fc-form-legend: #253b51;
+  --fc-border: #eece8a;
+}
+
+header h1,
+legend,
+button {
+  text-transform: uppercase;
+  font-family: var(--ff-titles);
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  background-color: var(--bg-primary);
+  height: 46.76rem;
+  width: clamp(75rem, 100%, 100%);
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+body {
+  background-color: var(--bg-secondary);
+  font-family: var(--ff-body);
+}
+
+.container {
+  width: 75rem;
+  margin: 0 auto;
+}
+
+header {
+  color: var(--fc-header);
+  text-align: center;
+  margin-top: 10.7rem;
+}
+
+header h1 {
+  font-size: 3.6rem;
+  line-height: 4.5rem;
+}
+
+header p {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  margin-bottom: 2.23rem;
+}
+
+form {
+  border-radius: 0px 0px 20px 20px;
+  background-color: var(--bg-form);
+  padding: 3.2rem 6.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+main {
+  background-color: var(--bg-button);
+  border-radius: 2rem 2rem 0px 0px;
+  text-align: center;
+  height: 13.3rem;
+  margin-top: 3.2rem;
+  padding: 5rem;
+}
+
+main legend {
+  color: var(--fc-header);
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  font-size: 2.4rem;
+  line-height: 3.4rem;
+  color: var(--fc-form-legend);
+  text-align: center;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--fc-border);
+}
+
+.fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-wrapper label,
+.input-checkbox label {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  color: var(--fc-form-label);
+  margin-bottom: 0.8rem;
+  letter-spacing: 2px;
+}
+
+.input-wrapper label span {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  color: var(--fc-form-span);
+}
+
+.input-wrapper input,
+.input-wrapper select,
+.input-wrapper textarea {
+  background-color: var(--bg-input);
+  border: 1px solid var(--fc-border);
+  border-radius: 0.8rem;
+  box-shadow: 0 2px var(--fc-border);
+  height: 5.6rem;
+  padding-left: 1rem;
+  color: var(--fc-form-span);
+}
+
+.col-2 {
+  display: flex;
+  gap: 2.2rem;
+}
+
+.col-2 > div,
+.input-wrapper select {
+  width: 50%;
+}
+
+.input-wrapper textarea {
+  height: 16.7rem;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  text-align: justify;
+  margin-bottom: 3rem;
+}
+
+.input-checkbox {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.input-checkbox input {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.col-3 {
+  display: flex;
+}
+
+.col-3 > div:first-child {
+  width: 50%;
+  margin-right: 3.2rem;
+}
+
+.col-3 > div:nth-child(2),
+.col-3 > div:nth-child(3) {
+  width: 14rem;
+  margin-left: 1rem;
+}
+
+button {
+  margin-top: 6.4rem;
+  color: var(--fc-header);
+  background-color: var(--bg-button);
+  border-radius: 0.8rem;
+  border: 0;
+  height: 5.1rem;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 3px 3px var(--fc-border);
+}
+
+button:hover {
+  background-color: var(--fc-border);
+  color: var(--bg-button);
+  transition: all 0.3s;
+  transform: scaleX(90%);
+}

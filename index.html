@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Formulário Avaliativo</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1>Avalie a sua mentoria</h1>
+        <p>Chegou a hora de avaliar o seu mentor. Bora lá?</p>
+        <img
+          src="assets/img1.png"
+          alt="balão de conversa de cor laranja com três estrelas dentro pintadas de branco"
+        />
+      </header>
+
+      <main>
+        <legend>Informações pessoais</legend>
+      </main>
+
+      <form>
+        <fieldset>
+          <div class="fieldset-wrapper">
+            <!--Início: Nome e sobrenome -->
+            <div class="col-2">
+              <div class="input-wrapper">
+                <label for="info-name">Nome</label>
+                <input type="text" id="info-name" />
+              </div>
+
+              <div class="input-wrapper">
+                <label for="info-lastname">Sobrenome</label>
+                <input type="text" id="info-lastname" />
+              </div>
+            </div>
+            <!--Fechamento: Nome e sobrenome -->
+
+            <!--Início: E-mail -->
+            <div class="input-wrapper">
+              <label for="info-email"
+                >E-mail <span>(digite um email válido)</span></label
+              >
+              <input type="email" id="info-email" />
+            </div>
+            <!--Fechamento: E-mail -->
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <div class="fieldset-wrapper">
+            <legend>Informações do mentor</legend>
+
+            <!--Início: Selecionar o mentor -->
+            <div class="input-wrapper">
+              <label for="info-mentor">Selecione quem foi o seu mentor</label>
+              <select id="info-mentor">
+                <option value="mentor01">Nome aleatório 01</option>
+                <option value="mentor02">Nome aleatório 02</option>
+                <option value="mentor03">Nome aleatório 03</option>
+                <option value="mentor04">Nome aleatório 04</option>
+                <option value="mentor05">Nome aleatório 05</option>
+              </select>
+            </div>
+            <!--Fechamento: Selecionar o mentor -->
+
+            <!--Início: Feedback sobre o mentor -->
+            <div class="input-wrapper">
+              <label for="mentor-feedback">Feedback sobre o mentor</label>
+              <textarea id="mentor-feedback"></textarea>
+            </div>
+            <!--Fechamento: Feedback sobre o mentor -->
+
+            <div class="input-checkbox">
+              <input type="checkbox" id="info-checkbox" />
+              <label for="info-checkbox"
+                >Todas as minhas dúvidas foram esclarecidas durante a
+                mentoria.</label
+              >
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <div class="fieldset-wrapper">
+            <legend>Agendando próxima mentoria</legend>
+            <!--Início: Data -->
+            <div class="col-3">
+              <div class="input-wrapper">
+                <label for="info-date">Data <span>(DD/MM/AAAA)</span></label>
+                <input type="date" id="info-date" />
+              </div>
+
+              <div class="input-wrapper">
+                <label for="info-date-begin">Das</label>
+                <input type="time" id="info-date-begin" />
+              </div>
+
+              <div class="input-wrapper">
+                <label for="info-date-end">Até</label>
+                <input type="time" id="info-date-end" />
+              </div>
+            </div>
+            <!--Fechamento: Data -->
+          </div>
+        </fieldset>
+
+        <button type="submit">Salvar</button>
+      </form>
+    </div>
+  </body>
+</html>
